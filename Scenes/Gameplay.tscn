@@ -1,0 +1,276 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scripts/Gameplay.cs" type="Script" id=1]
+[ext_resource path="res://Scenes/Green Zombie.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Red Zombie.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Ghost.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sprites/Background.jpg" type="Texture" id=5]
+[ext_resource path="res://Sprites/Moon.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Ground.jpg" type="Texture" id=7]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scripts/CameraFollow.cs" type="Script" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 6100.43, 61.4327 )
+
+[node name="Gameplay" type="Node2D"]
+script = ExtResource( 1 )
+greenZombie = ExtResource( 2 )
+redZombie = ExtResource( 3 )
+ghost = ExtResource( 4 )
+
+[node name="BG Parent" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Background1" type="Sprite" parent="BG Parent"]
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background2" type="Sprite" parent="BG Parent"]
+position = Vector2( 0, -720 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background3" type="Sprite" parent="BG Parent"]
+position = Vector2( 1280, 0 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background4" type="Sprite" parent="BG Parent"]
+position = Vector2( 1280, -720 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background5" type="Sprite" parent="BG Parent"]
+position = Vector2( 2560, 0 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background6" type="Sprite" parent="BG Parent"]
+position = Vector2( 2560, -720 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background7" type="Sprite" parent="BG Parent"]
+position = Vector2( 3840, 0 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background8" type="Sprite" parent="BG Parent"]
+position = Vector2( 3840, -720 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background9" type="Sprite" parent="BG Parent"]
+position = Vector2( 5120, 0 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background10" type="Sprite" parent="BG Parent"]
+position = Vector2( 5120, -720 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background11" type="Sprite" parent="BG Parent"]
+position = Vector2( -1280, 0 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background12" type="Sprite" parent="BG Parent"]
+position = Vector2( -1280, -720 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background13" type="Sprite" parent="BG Parent"]
+position = Vector2( -2560, 0 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background14" type="Sprite" parent="BG Parent"]
+position = Vector2( -2560, -720 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background15" type="Sprite" parent="BG Parent"]
+position = Vector2( -3840, 0 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background16" type="Sprite" parent="BG Parent"]
+position = Vector2( -3840, -720 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background17" type="Sprite" parent="BG Parent"]
+position = Vector2( -5120, 0 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background18" type="Sprite" parent="BG Parent"]
+position = Vector2( -5120, -720 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Moon" type="Sprite" parent="BG Parent"]
+position = Vector2( -325.528, 82.561 )
+texture = ExtResource( 6 )
+
+[node name="Ground Parent" type="StaticBody2D" parent="."]
+editor/display_folded = true
+
+[node name="Ground1" type="Sprite" parent="Ground Parent"]
+position = Vector2( 0, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground2" type="Sprite" parent="Ground Parent"]
+position = Vector2( 449, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground3" type="Sprite" parent="Ground Parent"]
+position = Vector2( 900, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground4" type="Sprite" parent="Ground Parent"]
+position = Vector2( 1350, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground5" type="Sprite" parent="Ground Parent"]
+position = Vector2( 1800, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground6" type="Sprite" parent="Ground Parent"]
+position = Vector2( 2250, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground7" type="Sprite" parent="Ground Parent"]
+position = Vector2( 2700, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground8" type="Sprite" parent="Ground Parent"]
+position = Vector2( 3150, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground9" type="Sprite" parent="Ground Parent"]
+position = Vector2( 3600, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground10" type="Sprite" parent="Ground Parent"]
+position = Vector2( 4050, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground11" type="Sprite" parent="Ground Parent"]
+position = Vector2( 4500, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground12" type="Sprite" parent="Ground Parent"]
+position = Vector2( 4950, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground13" type="Sprite" parent="Ground Parent"]
+position = Vector2( 5400, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground14" type="Sprite" parent="Ground Parent"]
+position = Vector2( 5850, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground15" type="Sprite" parent="Ground Parent"]
+position = Vector2( 6300, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground16" type="Sprite" parent="Ground Parent"]
+position = Vector2( -450, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground17" type="Sprite" parent="Ground Parent"]
+position = Vector2( -900, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground18" type="Sprite" parent="Ground Parent"]
+position = Vector2( -1350, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground19" type="Sprite" parent="Ground Parent"]
+position = Vector2( -1800, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground20" type="Sprite" parent="Ground Parent"]
+position = Vector2( -2250, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground21" type="Sprite" parent="Ground Parent"]
+position = Vector2( -2700, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground22" type="Sprite" parent="Ground Parent"]
+position = Vector2( -3150, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground23" type="Sprite" parent="Ground Parent"]
+position = Vector2( -3600, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground24" type="Sprite" parent="Ground Parent"]
+position = Vector2( -4050, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground25" type="Sprite" parent="Ground Parent"]
+position = Vector2( -4500, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground26" type="Sprite" parent="Ground Parent"]
+position = Vector2( -4950, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Ground27" type="Sprite" parent="Ground Parent"]
+position = Vector2( -5400, 652 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground Parent"]
+position = Vector2( 668.337, 715.45 )
+shape = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 8 )]
+position = Vector2( 465.294, 289.014 )
+
+[node name="Main Cam" type="Camera2D" parent="."]
+position = Vector2( 640, 360 )
+current = true
+script = ExtResource( 9 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Restart" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Monster_Spawn"]
+[connection signal="timeout" from="Restart" to="." method="_on_Player_Died"]
